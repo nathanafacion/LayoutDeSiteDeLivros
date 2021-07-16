@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vim Li Venci</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Parisienne&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+</head>
+
+<body>
+
+  <input id="close-menu" class="close-menu" type="checkbox" aria-label="Close menu" role="button">
+  <label class="close-menu-label" for="close-menu" title="close menu"></label>
+  <aside class="menu white-bg">
+    <div class="main-content menu-content">
+      <div onclick="getElementById('close-menu').checked = false;">
+
+      <a href="#home" class="logo">🕮 Vim, Li, Venci</a>
+      </div>
+
+      <nav>
+        <ul onclick="getElementById('close-menu').checked = false;">
+          <li><a href="#intro">Início</a></li>
+          <li><a href="#novidades">Novidades</a></li>
+          <li><a href="#resenhas">Resenhas</a></li>
+          <li><a href="#quemSomos">Quem Somos?</a></li>
+        </ul>
+      </nav>
+    </div>
+  </aside>
+
+  <div class="menu-spacing"></div>
+
+  <section id="home" class="intro main-bg section">
+    <div class="main-content intro-content">
+      <div class="intro-text-content">
+        <h1>Resenhas</h1>
+
+          <div class="carousel">
+            <div><img src="img/livros.jpg" class="carousel-img"></div>
+            <div><img src="img/livros.jpg" class="carousel-img"></div>
+            <div><img src="img/livros.jpg" class="carousel-img"></div>
+            <div><img src="img/livros.jpg" class="carousel-img"></div>
+            <div><img src="img/livros.jpg" class="carousel-img"></div>
+            <div><img src="img/livros.jpg" class="carousel-img"></div>
+
+          </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="grid-two" class="grid-one white-bg section">
+  <div class="main-content grid-one-content">
+    <h1 class="grid-main-heading">Novidades</h1>
+
+    <div class="grid">
+      <article style="margin-bottom:2rem;background-color:#DCDCDC;">
+        <img src="img/livros.jpg" class="img-article">
+          <div class="content-article">
+            <h3>Teste 1</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis cum delectus molestias. Atque doloribus
+              nobis laudantium esse ut, non commodi maxime distinctio veritatis unde, reprehenderit minus ad dolores
+              provident maiores.</p>
+        </article>
+
+      </article>
+      <article style="margin-bottom:2rem;background-color:#DCDCDC;">
+        <img src="img/livros.jpg" class="img-article">
+          <div class="content-article">
+            <h3>Teste 1</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis cum delectus molestias. Atque doloribus
+              nobis laudantium esse ut, non commodi maxime distinctio veritatis unde, reprehenderit minus ad dolores
+              provident maiores.</p>
+        </article>
+
+        <article style="margin-bottom:2rem;background-color:#DCDCDC;">
+          <img src="img/livros.jpg" class="img-article">
+            <div class="content-article">
+              <h3>Teste 1</h3>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis cum delectus molestias. Atque doloribus
+                nobis laudantium esse ut, non commodi maxime distinctio veritatis unde, reprehenderit minus ad dolores
+                provident maiores.</p>
+          </article>
+    </div>
+  </div>
+</section>
+
+  <footer id="footer" class="main-bg">
+    <p class="main-content footer">Feito por Nana Facion</p>
+  </footer>
+
+  <a class="back-to-top" href="#">➤</a>
+   <script type="text/javascript" src="jquery.min.js"></script>
+   <script type="text/javascript" src="jquery-migrate.js"></script>
+   <script type="text/javascript" src="slick/slick.min.js"></script>
+
+   <script type="text/javascript">
+     $(document).ready(function(){
+        var windowWidth = window.innerWidth;
+        if (windowWidth > 500){
+           $('.carousel').slick({
+             slidesToShow: 5,
+             slidesToScroll: 1,
+             autoplay: true,
+             autoplaySpeed: 2000,
+           });
+         }else {
+           $('.carousel').slick({
+             slidesToShow: 1,
+             slidesToScroll: 1,
+             autoplay: true,
+             autoplaySpeed: 2000,
+           });
+         }
+     });
+   </script>
+</body>
+
+</html>
